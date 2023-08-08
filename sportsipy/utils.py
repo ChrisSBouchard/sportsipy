@@ -29,7 +29,7 @@ def _rate_limit_pq(pq_input, sleep=10):
     Implement a rate limit on pq requests to get around sportsreference's bot
     traffic.
     """
-    ret = pq(pq_input)
+    ret = pq(url=pq_input)
     time.sleep(sleep)
     return ret
 

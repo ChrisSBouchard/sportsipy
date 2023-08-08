@@ -316,7 +316,7 @@ ADVANCED_STATS_URL = ('https://www.sports-reference.com/cbb/seasons/'
 ADVANCED_OPPONENT_STATS_URL = ('https://www.sports-reference.com/cbb/seasons/'
                                '%s-advanced-opponent-stats.html')
 
-SCHEDULE_URL = ('https://www.sports-reference.com/cbb/schools/%s/'
+SCHEDULE_URL = ('https://www.sports-reference.com/cbb/schools/%s/men/'
                 '%s-schedule.html')
 BOXSCORE_URL = 'https://www.sports-reference.com/cbb/boxscores/%s.html'
 BOXSCORES_URL = ('https://www.sports-reference.com/cbb/boxscores/index.cgi?'
