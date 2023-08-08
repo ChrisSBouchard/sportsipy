@@ -779,11 +779,11 @@ class Boxscore:
             'home_two_point_field_goals': self.home_two_point_field_goals,
             'home_wins': self.home_wins,
             'location': self.location,
-            'losing_abbr': self.losing_abbr,
+            'losing_abbr': None,
             'losing_name': self.losing_name,
             'pace': self.pace,
             'winner': self.winner,
-            'winning_abbr': self.winning_abbr,
+            'winning_abbr': None,
             'winning_name': self.winning_name
         }
         return pd.DataFrame([fields_to_include], index=[self._uri])
