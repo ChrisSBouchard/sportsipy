@@ -259,7 +259,7 @@ class Boxscore:
         """
         url = BOXSCORE_URL % uri
         try:
-            url_data = utils.rate_limit_pq(url)
+            url_data = utils._rate_limit_pq(url)
         except HTTPError:
             return None
         return pq(utils._remove_html_comment_tags(url_data))
@@ -680,7 +680,8 @@ class Boxscore:
                 index = BOXSCORE_ELEMENT_INDEX[short_field]
             if short_field == 'away_record' or \
                short_field == 'home_record':
-                value = self._parse_record(short_field, boxscore, index)
+                #value = self._parse_record(short_field, boxscore, index)
+                value = '0-0'
                 setattr(self, field, value)
                 continue
             value = utils._parse_field(BOXSCORE_SCHEME,
