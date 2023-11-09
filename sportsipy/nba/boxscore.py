@@ -346,6 +346,8 @@ class Boxscore:
         game_info = items[0].split('\n')
         if len(game_info) < 3 and field == 'location':
             return None
+        if len(game_info) > 3:
+            return game_info[BOXSCORE_ELEMENT_INDEX[field]+1]
         return game_info[BOXSCORE_ELEMENT_INDEX[field]]
 
     def _parse_name(self, field, boxscore):
