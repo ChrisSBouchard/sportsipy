@@ -22,7 +22,8 @@ setup(
         "numpy >= 1.19.5",
         "pandas >= 0.24.1",
         "pyquery >= 1.4.0",
-        "requests >= 2.18.4"
+        "requests >= 2.18.4",
+        "cloudscraper >= 1.2.71",
     ],
     classifiers=(
         'Programming Language :: Python :: 3.7',

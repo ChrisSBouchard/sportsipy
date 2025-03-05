@@ -4,6 +4,7 @@ from datetime import datetime
 from lxml.etree import ParserError, XMLSyntaxError
 from pyquery import PyQuery as pq
 import time
+import cloudscraper
 
 
 # {
@@ -24,14 +25,18 @@ SEASON_START_MONTH = {
     'nhl': {'start': 10, 'wrap': True}
 }
 
+
 def _rate_limit_pq(pq_input, sleep=10):
     """
     Implement a rate limit on pq requests to get around sportsreference's bot
     traffic.
     """
-    ret = pq(url=pq_input)
+    scraper = cloudscraper.create_scraper()
+    response = scraper.get(pq_input)
+    ret = pq(response.text)
     time.sleep(sleep)
     return ret
+
 
 def _todays_date():
     """
